@@ -133,7 +133,7 @@ p {
             console.timeLog("Const values loaded current time is...");
             console.timeStamp("x")
 
-            let SearchQueryList = ['examples','Example','scenarios','possible'];
+            let SearchQueryList = ['exAmples','Example','scenarios','possible'];
             let PossibleSearches = ['https://example.com','https://example.com','https://example.com','https://example.com'];
             let RealSearchQuery = [];
 
@@ -146,7 +146,7 @@ p {
 
                 InputQuery.toLowerCase();
                 try {
-                    SearchQueryList[0].toLowerCase();
+                    const updatedSearchList = SearchQueryList.map(num.toLowerCase());
                     console.timeLog("it worked");
                     console.timeStamp("x");
                     console.log(SearchQueryList);
