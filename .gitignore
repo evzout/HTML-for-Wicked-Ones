@@ -153,3 +153,6 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# aditionall ignores
+oracleJdk-27/
