@@ -123,11 +123,9 @@ p {
             console.time("Final run time:");
             console.time("run time");
             console.time("Time of error");
-            console.timeStamp("x");
             console.time("it worked");
+            console.timeStamp("x");
 
-            const InputQuery = document.getElementById('SearchQueryForSearchQuery').value.trim();
-            const InputPassword = document.getElementById('PasswordForSearchQuery').value.trim();
             const BUTTON = document.getElementById('BUTTON');
 
             console.timeLog("Const values loaded current time is...");
@@ -135,35 +133,34 @@ p {
 
             let SearchQueryList = ['exAmples','Example','scenarios','possible'];
             let PossibleSearches = ['https://example.com','https://example.com','https://example.com','https://example.com'];
-            let RealSearchQuery = [];
 
             console.timeLog("let statements declared");
             console.log("button function");
             console.timeStamp("x");
 
             BUTTON.addEventListener('click', function() {
+                const InputQuery = document.getElementById('SearchQueryForSearchQuery').value.trim();
+                const InputPassword = document.getElementById('PasswordForSearchQuery').value.trim();
+
+                event.preventDefault();
                 console.timeStamp("x");
 
                 InputQuery.toLowerCase();
                 try {
-                    const updatedSearchList = SearchQueryList.map(num.toLowerCase());
+                    let updatedSearchList = SearchQueryList.map(revis => revis.toLowerCase());
+
                     console.timeLog("it worked");
                     console.timeStamp("x");
-                    console.log(SearchQueryList);
+                    console.log(updatedSearchList);
+                    console.log(InputQuery);
+                    console.log(InputPassword);
+
+                    let ResultOfSearch = updatedSearchList.filter(match => InputQuery.includes(match));
+                    console.log(ResultOfSearch);
+                    console.timeLog("it worked");
 
                 } catch(error) {
                     console.error("This is not an function will need rework this can't be fucked rn");
-                    console.timeLog("Time of error");
-                    console.timeStamp("x");
-                }
-
-                try {
-                    RealSearchQuery.push(InputQuery);
-                    console.log(RealSearchQuery);
-                    console.timeLog("it worked");
-
-                } catch(error) {
-                    console.error("Another fucking problem great I will work it out and fix it later");
                     console.timeLog("Time of error");
                     console.timeStamp("x");
                 }
