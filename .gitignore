@@ -156,3 +156,4 @@ vite.config.ts.timestamp-*
 
 # aditionall ignores
 oracleJdk-27/
+.venv/
